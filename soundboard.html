@@ -1,21 +1,120 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-    <title>x2zurks Soundboard</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>zurks soundboard</title>
+
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background: #111;
+            color: white;
+            text-align: center;
+            margin: 0;
+        }
+
+        header {
+            padding: 60px 20px 30px;
+        }
+
+        h1 {
+            font-size: 45px;
+            margin-bottom: 10px;
+        }
+
+        header p {
+            color: #aaa;
+        }
+
+        .soundboard {
+            max-width: 800px;
+            margin: 30px auto;
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 15px;
+            padding: 20px;
+        }
+
+        .sound-button {
+            background: #1c1c1c;
+            color: white;
+            border: 1px solid #333;
+            border-radius: 15px;
+            padding: 25px;
+            font-size: 18px;
+            cursor: pointer;
+        }
+
+        .sound-button:hover {
+            transform: translateY(-3px);
+        }
+
+        .sound-button:active {
+            transform: scale(0.97);
+        }
+
+        .back {
+            display: inline-block;
+            margin: 30px;
+            color: #aaa;
+            text-decoration: none;
+        }
+
+        .back:hover {
+            color: white;
+        }
+
+        footer {
+            margin-top: 50px;
+            padding: 30px;
+            color: #666;
+        }
+    </style>
 </head>
 
 <body>
 
-    <h1>x2zurks Soundboard</h1>
-    <p>Questionable noises.</p>
+    <header>
+        <h1>🔊 zurks soundboard</h1>
+        <p>sounds and noises of questionable origin</p>
+    </header>
 
-    <!-- SOUND BUTTONS -->
+    <main>
 
-    <button onclick="playSound('sounds/BLACK.mp3')">BLACK</button>
-    <button onclick="playSound('sounds/fahh.mp3')">Fahh</button>
-    <button onclick="playSound('sounds/kittytism.mp3')">Kittymars</button>
-    <button onclick="playSound('sounds/odindin.mp3')">Odindin</button>
-    <button onclick="playSound('sounds/ps2startup.mp3')">PS2 Startup</button>
+        <!-- SOUND BUTTONS -->
+
+        <div class="soundboard">
+
+            <button class="sound-button" onclick="playSound('sounds/BLACK.mp3')">
+                BLACK
+            </button>
+
+            <button class="sound-button" onclick="playSound('sounds/fahh.mp3')">
+                fahh
+            </button>
+
+            <button class="sound-button" onclick="playSound('sounds/kittytism.mp3')">
+                kittytism
+            </button>
+
+            <button class="sound-button" onclick="playSound('sounds/odindin.mp3')">
+                odindin
+            </button>
+
+            <button class="sound-button" onclick="playSound('sounds/ps2startup.mp3')">
+                PS2 startup
+            </button>
+
+        </div>
+
+        <a href="index.html" class="back">← back to zurks lab</a>
+
+    </main>
+
+    <footer>
+        <p>2026 x2zurks</p>
+    </footer>
 
     <script>
         function playSound(file) {
