@@ -1,9 +1,28 @@
 <!DOCTYPE html>
 <html>
-  <head>
-    <title>zurks soundboard</title>
-  </head>
-  <body>
-    <h1>zurks soundboard</h1>
-  </body>
+<head>
+    <title>x2zurks Soundboard</title>
+</head>
+
+<body>
+
+    <h1>x2zurks Soundboard</h1>
+    <p>Questionable noises.</p>
+
+    <!-- SOUND BUTTONS -->
+
+    <button onclick="playSound('sounds/BLACK.mp3')">BLACK</button>
+    <button onclick="playSound('sounds/fahh.mp3')">Fahh</button>
+    <button onclick="playSound('sounds/kittytism.mp3')">Kittymars</button>
+    <button onclick="playSound('sounds/odindin.mp3')">Odindin</button>
+    <button onclick="playSound('sounds/ps2startup.mp3')">PS2 Startup</button>
+
+    <script>
+        function playSound(file) {
+            let sound = new Audio(file);
+            sound.play();
+        }
+    </script>
+
+</body>
 </html>
