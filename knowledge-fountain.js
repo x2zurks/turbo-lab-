@@ -1,7 +1,8 @@
 const knowledgeButton = document.getElementById("knowledgeButton");
 const knowledgeBox = document.getElementById("knowledgeBox");
 const knowledgeCount = document.getElementById("knowledgeCount");
-
+const brainrotPercent = document.getElementById("brainrotPercent");
+const brainrotFill = document.getElementById("brainrotFill");
 let count = 0;
 
 const subjects = [
@@ -108,7 +109,10 @@ function generateKnowledge() {
     const action = getRandom(actions);
     const object = getRandom(objects);
     const ending = getRandom(endings);
+const brainrotLevel = Math.floor(Math.random() * 101);
 
+brainrotPercent.textContent = brainrotLevel + "%";
+brainrotFill.style.width = brainrotLevel + "%";
     const knowledge =
         subject + " " +
         action + " " +
